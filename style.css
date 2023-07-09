@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Outfit:wght@300;400;600&display=swap");
+
+/* Declare Variables */
+
+:root {
+  /* Primary  COlors*/
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral Colors */
+
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Font weights */
+  --fw-sm: 300;
+  --fw-md: 400;
+  --fw-lg: 600;
+}
+
+/* GLoabl Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Outfit";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Now Style our components */
+
+body {
+  /* width: 1440px; */
+  height: 100vh;
+  background-color: var(--dark-blue-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.7rem;
+  background-color: var(--dark-blue-card);
+  color: white;
+  border-radius: 20px;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-box .equi-img {
+  border-radius: 10px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+  background-color: rgba(0, 255, 255, 0.495);
+  border-radius: 10px;
+}
+
+.img-box:hover .overlay {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-heading {
+  /* font-size: 2rem; */
+  font-weight: var(--fw-lg);
+}
+
+.main-heading:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.main-content {
+  font-size: 1.2rem;
+  color: var(--soft-blue);
+  line-height: 1.7rem;
+  font-weight: var(--fw-sm);
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.eth-box {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--cyan);
+  font-weight: var(--fw-lg);
+}
+
+.remaning-days-box {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--soft-blue);
+}
+
+hr {
+  opacity: 0.1;
+}
+
+.avatar-box {
+  display: flex;
+  gap: 1rem;
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.avatar-img {
+  width: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.created-by {
+  color: var(--soft-blue);
+}
+
+.username {
+  color: var(--white);
+}
